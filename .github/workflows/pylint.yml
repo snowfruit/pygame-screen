@@ -21,4 +21,5 @@ jobs:
         pip install pygame-ce
     - name: Analysing the code with pylint
       run: |
-        pylint $(git ls-files ':(glob)pygame_screen/*.py')
+        pylint $(git ls-files '*.py')
+        
