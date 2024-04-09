@@ -1,8 +1,12 @@
+"""Example 1. Showing the canvas-surface contained inside the screen-surface."""
+
 import pygame
-from pygame_screen import *
+
+from pygame_screen import ScreenContain
 
 
 def main():
+    """Function running the example."""
     pygame.init()
     clock = pygame.Clock()
 
@@ -17,7 +21,7 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
-          
+
         # Update the screen. Size, scale and everything else.
         screen.update()
         # Fill canvas-surface and screen-surface with set colors.

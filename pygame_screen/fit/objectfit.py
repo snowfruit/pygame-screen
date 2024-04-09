@@ -9,9 +9,7 @@ import math
 # from enum import Enum
 
 
-def ratio(
-    a: tuple[float, float], b: tuple[float, float]
-) -> tuple[float, float]:
+def ratio(a: tuple[float, float], b: tuple[float, float]) -> tuple[float, float]:
     """Docstring."""
     x = a[0] / b[0]
     y = a[1] / b[1]
@@ -115,7 +113,6 @@ def resize_match(
     x, y = size
 
     if use_integer_scaling:
-
         x = math.floor(x)
         y = math.floor(y)
 

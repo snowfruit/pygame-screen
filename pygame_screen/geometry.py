@@ -1,9 +1,5 @@
 """Docstring."""
 
-from typing import TypeVar
-
-import pygame
-
 
 class Geometry:
     """Geometry-class for the use in Screen-class."""

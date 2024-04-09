@@ -1,9 +1,14 @@
+"""Example 2. Showing the canvas-surface on the screen-surface with a wide range of settings."""
+
 from random import random, randrange
+
 import pygame
-from pygame_screen import *
+
+import pygame_screen as pgs
 
 
 def main():
+    """Function running the example."""
     pygame.init()
     clock = pygame.Clock()
 
@@ -17,18 +22,18 @@ def main():
     # Settings we can use to make things easier to change.
 
     # A retro, blocky settings-object.
-    retro = Settings()
+    retro = pgs.Settings()
     retro.use_integer_scaling = True
     retro.use_smooth_scaling = False
 
     # A modern, smooth settings-object.
-    modern = Settings()
+    modern = pgs.Settings()
     modern.use_integer_scaling = False
     modern.use_smooth_scaling = True
 
     # Set canvas-size to same as starting screen-size.
-    # Use a screen set to contain the canvas.
-    screen = ScreenContain(window_size)
+    screen = pgs.ScreenContain(window_size)
+    """Object with canvas-surface and screen-surface."""
 
     pygame.display.set_caption(screen.__class__.__name__)
 
@@ -41,24 +46,24 @@ def main():
             # Different screen preset to try.
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_1:
-                    screen = ScreenContain(window_size, retro)
+                    screen = pgs.ScreenContain(window_size, retro)
                 if event.key == pygame.K_2:
-                    screen = ScreenContain(window_size, modern)
+                    screen = pgs.ScreenContain(window_size, modern)
                 if event.key == pygame.K_3:
-                    screen = ScreenCover(window_size, retro)
+                    screen = pgs.ScreenCover(window_size, retro)
                 if event.key == pygame.K_4:
-                    screen = ScreenCover(window_size, modern)
+                    screen = pgs.ScreenCover(window_size, modern)
                 if event.key == pygame.K_5:
-                    screen = ScreenFill(window_size, retro)
+                    screen = pgs.ScreenFill(window_size, retro)
                 if event.key == pygame.K_6:
-                    screen = ScreenFill(window_size, modern)
+                    screen = pgs.ScreenFill(window_size, modern)
                 if event.key == pygame.K_7:
-                    screen = ScreenScaleDown(window_size, retro)
+                    screen = pgs.ScreenScaleDown(window_size, retro)
                 if event.key == pygame.K_8:
-                    screen = ScreenScaleDown(window_size, modern)
+                    screen = pgs.ScreenScaleDown(window_size, modern)
                 if event.key == pygame.K_q:
                     # Create a ScreemFixed with random scale and position.
-                    screen = ScreenFixed(window_size)
+                    screen = pgs.ScreenFixed(window_size)
 
                     # Set new random scale.
                     screen.geometry.scale_x = 0.5 + random()
@@ -70,13 +75,13 @@ def main():
                     screen.geometry.position = (x, y)
                 if event.key == pygame.K_w:
                     # Create a ScreemFixedCenter with random scale.
-                    screen = ScreenCenterFixedSize(window_size)
+                    screen = pgs.ScreenCenterFixedSize(window_size)
 
                     # Set new random scale.
                     screen.geometry.scale_x = 0.5 + random()
                     screen.geometry.scale_y = 0.5 + random()
                 if event.key == pygame.K_e:
-                    screen = ScreenMatch(window_size)
+                    screen = pgs.ScreenMatch(window_size)
 
                 print(screen.__class__.__name__)
                 pygame.display.set_caption(screen.__class__.__name__)
