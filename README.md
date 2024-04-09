@@ -1,7 +1,7 @@
 # pygame-screen
 Add an responsive canvas-surface to your screen-surface.
 
-## Fit the canvas on screen.
+## Fit the canvas on screen
 Different ways the canvas-surface can be placed on the screen-surface.
 * Center, fixed size
 * Contain
