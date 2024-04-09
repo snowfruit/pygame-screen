@@ -1,3 +1,6 @@
+![GitHub License](https://img.shields.io/github/license/snowfruit/pygame-screen)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/snowfruit/pygame-screen/.github%2Fworkflows%2Fpylint.yml)
+
 # pygame-screen
 Add an responsive canvas-surface to your screen-surface.
 
