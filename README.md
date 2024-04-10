@@ -1,4 +1,4 @@
-![GitHub License](https://img.shields.io/github/license/snowfruit/pygame-screen)
+![GitHub License](https://img.shields.io/github/license/snowfruit/pygame-screen)(./LICENSE)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/snowfruit/pygame-screen/.github%2Fworkflows%2Fpylint.yml)
 
 # pygame-screen
