@@ -1,6 +1,5 @@
-![GitHub License](https://img.shields.io/github/license/snowfruit/pygame-screen)(./LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/snowfruit/pygame-screen/.github%2Fworkflows%2Fpylint.yml)
-
 # pygame-screen
 Add a responsive foreground-surface over an adaptive background-surface.
 
