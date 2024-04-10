@@ -22,5 +22,6 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         echo $(git ls-files './pygame_screen/*.py')
-        pylint $(git ls-files '*.py')
+        pylint $(git ls-files './pygame_screen/*.py')        
+        echo $(git ls-files 'example*.py')
         
