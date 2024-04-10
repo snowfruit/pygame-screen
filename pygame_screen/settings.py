@@ -1,4 +1,4 @@
-"""Docstring."""
+"""Please edit this docstring."""
 
 import pygame.color
 
@@ -11,21 +11,21 @@ class Settings:
         """Value can be be used for frame rate. Have no direct control over frame rate!"""
 
         self._use_integer_scaling: bool = False
-        """Scale canvas using integer instead of float?"""
+        """Scale foreground using integer instead of float?"""
 
         self._use_smooth_scaling: bool = False
-        """Scale canvas using bilinear scaling?"""
+        """Scale foreground using bilinear scaling?"""
 
-        self._center_canvas: bool = True
-        """Center the canvas-surface on the screen-surface?"""
+        self._center_foreground: bool = True
+        """Center the foreground-surface on the screen-surface?"""
 
         self._clamp_size: bool = True
-        """Clamp minimum size to the canvas original size."""
+        """Clamp minimum size to the foreground original size."""
 
         # Fill colors.
-        self._canvas_color: pygame.color = (0, 128, 0)  # Dark green.
-        """Fill-color used when clearing the canvas-surface."""
-        self._screen_color: pygame.color = (128, 0, 0)  # Dark red.
+        self._foreground_color: pygame.color = (0, 128, 0)  # Dark green.
+        """Fill-color used when clearing the foreground-surface."""
+        self._background_color: pygame.color = (128, 0, 0)  # Dark red.
         """Fill-color used when clearing the screen-surface."""
 
     @property
@@ -39,7 +39,7 @@ class Settings:
 
     @property
     def clamp_size(self) -> bool:
-        """Clamp minimum size to the canvas original size."""
+        """Clamp minimum size to the foreground original size."""
         return self._clamp_size
 
     @clamp_size.setter
@@ -57,7 +57,7 @@ class Settings:
 
     @property
     def use_smooth_scaling(self) -> bool:
-        """Resize using bilinear filter on canvas-surface."""
+        """Resize using bilinear filter on foreground-surface."""
         return self._use_smooth_scaling
 
     @use_smooth_scaling.setter
@@ -65,28 +65,28 @@ class Settings:
         self._use_smooth_scaling = value
 
     @property
-    def center_canvas(self) -> bool:
-        """Center canvas-surface over screen-surface."""
-        return self._center_canvas
+    def center_foreground(self) -> bool:
+        """Center foreground-surface over screen-surface."""
+        return self._center_foreground
 
-    @center_canvas.setter
-    def center_canvas(self, value: bool) -> None:
-        self._center_canvas = value
+    @center_foreground.setter
+    def center_foreground(self, value: bool) -> None:
+        self._center_foreground = value
 
     @property
-    def canvas_color(self) -> pygame.color:
-        """Color used when filling the canvas-surface when cleared."""
-        return self._canvas_color
+    def foreground_color(self) -> pygame.color:
+        """Color used when filling the foreground-surface when cleared."""
+        return self._foreground_color
 
-    @canvas_color.setter
-    def canvas_color(self, color: pygame.color) -> None:
-        self._canvas_color = color
+    @foreground_color.setter
+    def foreground_color(self, color: pygame.color) -> None:
+        self._foreground_color = color
 
     @property
     def screen_color(self) -> pygame.color:
-        """Color used when filling the screen-surface when cleared."""
-        return self._screen_color
+        """Color used when filling the background-surface when cleared."""
+        return self._background_color
 
     @screen_color.setter
     def screen_color(self, color: pygame.color) -> None:
-        self._screen_color = color
+        self._background_color = color

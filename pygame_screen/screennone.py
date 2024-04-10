@@ -1,4 +1,4 @@
-"""Docstring."""
+"""Please edit this docstring."""
 
 from pygame_screen.screen import Screen
 

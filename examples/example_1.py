@@ -1,4 +1,7 @@
-"""Example 1. Showing the canvas-surface contained inside the screen-surface."""
+"""
+Example 1.
+Showing the background-surface contained inside the foreground-surface.
+"""
 
 import pygame
 
@@ -12,7 +15,7 @@ def main():
 
     # Window, screen and canvas use the same size in this example.
     window_size = (320, 240)
-    # Use a screen set to contain the canvas.
+    # Set everything to the same size.
     screen = ScreenContain(window_size)
 
     running = True
@@ -28,10 +31,10 @@ def main():
         screen.clear()
 
         # Render a circle to help demonstrate the scaling.
-        pygame.draw.circle(screen.canvas, (255, 255, 255), (160, 120), 32)
+        pygame.draw.circle(screen.foreground, (255, 255, 255), (160, 120), 32)
 
         # Blit canvas-surface to screen-surface.
-        screen.blit_canvas_to_screen()
+        screen.blit_foreground_to_background()
 
         pygame.display.flip()
 

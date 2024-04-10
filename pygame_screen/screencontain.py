@@ -1,4 +1,4 @@
-"""Docstring."""
+"""Please edit this docstring."""
 
 from pygame_screen.fit import objectfit
 from pygame_screen.screen import Screen
@@ -9,15 +9,15 @@ from pygame_screen.screen import Screen
 
 class ScreenContain(Screen):
     """
-    Based on Screen-class. Applies a contain-style to canvas-surface.
+    Based on Screen-class. Applies a contain-style to foreground-surface.
     Note:
         https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit#contain
     """
 
     def update_scale(self) -> None:
         self.geometry.scale = objectfit.resize_contain(
-            self.screen.get_size(),
-            self.canvas.get_size(),
+            self.background.get_size(),
+            self.foreground.get_size(),
             self.settings.use_integer_scaling,
             self.settings.clamp_size,
         )

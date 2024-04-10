@@ -10,11 +10,39 @@ import math
 
 
 def ratio(a: tuple[float, float], b: tuple[float, float]) -> tuple[float, float]:
-    """Docstring."""
+    """Please edit this docstring."""
     x = a[0] / b[0]
     y = a[1] / b[1]
 
     return (x, y)
+
+
+def ratio_min(
+    a: tuple[float, float], b: tuple[float, float], clamp: bool = False
+) -> float:
+    """Please edit this docstring."""
+    scale_x, scale_y = ratio(a, b)
+    new_scale = min(scale_x, scale_y)
+
+    # Set scale to a minimum of 1 if clamped.
+    if clamp:
+        new_scale = max(new_scale, 1)
+
+    return new_scale
+
+
+def ratio_max(
+    a: tuple[float, float], b: tuple[float, float], clamp: bool = False
+) -> float:
+    """Please edit this docstring."""
+    scale_x, scale_y = ratio(a, b)
+    new_scale = max(scale_x, scale_y)
+
+    # Set scale to a minimum of 1 if clamped.
+    if clamp:
+        new_scale = max(new_scale, 1)
+
+    return new_scale
 
 
 def resize_contain(
@@ -23,13 +51,8 @@ def resize_contain(
     use_integer_scaling: bool = False,
     clamp: bool = False,
 ) -> tuple[float, float]:
-    """Docstring."""
-    scale_x, scale_y = ratio(size_a, size_b)
-    new_scale = min(scale_x, scale_y)
-
-    # Set scale to a minimum of 1 if clamped.
-    if clamp:
-        new_scale = max(new_scale, 1)
+    """Please edit this docstring."""
+    new_scale = ratio_min(size_a, size_b, clamp)
 
     if use_integer_scaling:
         # Set scale to a minimum of 1. Else it could be 0.
@@ -46,16 +69,11 @@ def resize_cover(
     use_integer_scaling: bool = False,
     clamp: bool = False,
 ) -> tuple[float, float]:
-    """Docstring."""
-    scale_x, scale_y = ratio(size_a, size_b)
+    """Please edit this docstring."""
 
     # 'Cover' needs scale_x and scale_y to be the same value.
     # Set scale to the biggest of width and height.
-    new_scale = max(scale_x, scale_y)
-
-    # Set scale to a minimum of 1 if clamped.
-    if clamp:
-        new_scale = max(new_scale, 1)
+    new_scale = ratio_max(size_a, size_b, clamp)
 
     if use_integer_scaling:
         # Set scale to a minimum of 1. Else it could be 0.
@@ -72,7 +90,7 @@ def resize_fill(
     use_integer_scaling: bool = False,
     clamp: bool = False,
 ) -> tuple[float, float]:
-    """Docstring."""
+    """Please edit this docstring."""
     scale_x, scale_y = ratio(size_a, size_b)
 
     # Set scale to a minimum of 1 if clamped.
@@ -98,7 +116,7 @@ def resize_scale_down(
     use_integer_scaling: bool = False,
     clamp: bool = False,
 ) -> tuple[float, float]:
-    """Docstring."""
+    """Please edit this docstring."""
     # Scale-down is the same base as contain.
 
     return resize_contain(size_a, size_b, use_integer_scaling, clamp)
@@ -109,7 +127,7 @@ def resize_match(
     use_integer_scaling: bool = False,
     clamp: bool = False,
 ) -> tuple[float, float]:
-    """Docstring."""
+    """Please edit this docstring."""
     x, y = size
 
     if use_integer_scaling:

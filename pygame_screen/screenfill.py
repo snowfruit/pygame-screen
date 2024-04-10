@@ -1,4 +1,4 @@
-"""Docstring."""
+"""Please edit this docstring."""
 
 from pygame_screen.screen import Screen, surfacefit
 
@@ -8,7 +8,7 @@ from pygame_screen.screen import Screen, surfacefit
 
 class ScreenFill(Screen):
     """
-    Based on Screen-class. Applies a fill-style to canvas-surface.
+    Based on Screen-class. Applies a fill-style to foreground-surface.
     Note:
         https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit#fill
     """
@@ -17,10 +17,10 @@ class ScreenFill(Screen):
         # 'Fill' always use 0, 0.
         self.geometry.position = (0, 0)
 
-    def update_canvas_scaled(self) -> None:
+    def update_foreground_scaled(self) -> None:
         # Resize to new resolution.
-        new_size = self.screen.get_size()
+        new_size = self.background.get_size()
 
-        self.canvas_scaled = surfacefit.surface_resize_to(
-            self.canvas, new_size, self.settings.use_smooth_scaling
+        self.foreground_scaled = surfacefit.surface_resize_to(
+            self.foreground, new_size, self.settings.use_smooth_scaling
         )

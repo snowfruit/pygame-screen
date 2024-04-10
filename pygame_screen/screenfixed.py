@@ -1,4 +1,4 @@
-"""Docstring."""
+"""Please edit this docstring."""
 
 from pygame_screen.screen import Screen
 
@@ -8,7 +8,7 @@ from pygame_screen.screen import Screen
 
 class ScreenFixed(Screen):
     """
-    Based on Screen-class. Do not change size or position for canvas-surface.
+    Based on Screen-class. Do not change size or position for foreground-surface.
     Note:
         https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
     """

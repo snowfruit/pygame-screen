@@ -1,4 +1,4 @@
-"""Docstring."""
+"""Please edit this docstring."""
 
 from pygame_screen.fit import objectfit
 from pygame_screen.screencontain import ScreenContain
@@ -9,7 +9,7 @@ from pygame_screen.screencontain import ScreenContain
 
 class ScreenScaleDown(ScreenContain):
     """
-    Based on Screen-class. Canvas-surface is 1.0 or smaller in scale.
+    Based on Screen-class. Foreground-surface is 1.0 or smaller in scale.
     Note:
         https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit#scale-down
     """
@@ -18,14 +18,14 @@ class ScreenScaleDown(ScreenContain):
         # Notice that integer-scaling and clamp and is set to False.
         # ScreenCenter is an better alternativ if change is wanted.
         self.geometry.scale = objectfit.resize_scale_down(
-            self.screen.get_size(),
-            self.canvas.get_size(),
+            self.background.get_size(),
+            self.foreground.get_size(),
             False,
             False,
         )
 
         # ScreenContain use same x and y value for scale.
-        # TODO: If integer scaling is used it can be a problem in the future.
+        # If integer scaling is used it can be a problem in the future?
         new_scale, _ = self.geometry.scale
 
         # Set scale to max 1.

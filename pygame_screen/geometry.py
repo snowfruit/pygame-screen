@@ -1,4 +1,4 @@
-"""Docstring."""
+"""Please edit this docstring."""
 
 
 class Geometry:
@@ -6,14 +6,13 @@ class Geometry:
 
     def __init__(self) -> None:
         self._scale: tuple[float, float] = (1.0, 1.0)
-        """Used for horizontal scaling on canvas and position."""
+        """Used for horizontal scaling on foreground and position."""
 
-        # TODO: Implement zoom.
         self._zoom: tuple[float, float] = (1.0, 1.0)
-        """Used for horizontal zoom on canvas and position."""
+        """Not implemented. Used for horizontal zoom on foreground and position."""
 
-        self._position: tuple[float, float] = (0, 0)
-        """Position the canvas-surface will be blit onto the screen-surface."""
+        self._position: tuple[float, float] = (0.0, 0.0)
+        """Position the foreground-surface will be blit onto the screen-surface."""
 
     @property
     def scale(self) -> tuple[float, float]:
@@ -43,7 +42,7 @@ class Geometry:
         self._scale = (self.scale_y, factor)
 
     @property
-    def zoom(self) -> tuple[int, float | float]:
+    def zoom(self) -> tuple[float, float]:
         """'Zoom' as tuple."""
         return self._zoom
 
@@ -71,7 +70,7 @@ class Geometry:
 
     @property
     def position(self) -> tuple[float, float]:
-        """The position canvas-surface is blit on screen-surface."""
+        """The position foreground-surface is blit on screen-surface."""
         return self._position
 
     @position.setter

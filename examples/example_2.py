@@ -1,4 +1,7 @@
-"""Example 2. Showing the canvas-surface on the screen-surface with a wide range of settings."""
+"""
+Example 2.
+Showing the background-surface on the foreground-surface with a wide range of settings.
+"""
 
 from random import random, randrange
 
@@ -12,7 +15,7 @@ def main():
     pygame.init()
     clock = pygame.Clock()
 
-    # Window, screen and canvas use the same size in this example.
+    # Window, screen, background and foreground use the same size in this example.
     window_size = (320, 240)
 
     # Screen use a resizable window.
@@ -31,9 +34,8 @@ def main():
     modern.use_integer_scaling = False
     modern.use_smooth_scaling = True
 
-    # Set canvas-size to same as starting screen-size.
+    # Set everything to the same size.
     screen = pgs.ScreenContain(window_size)
-    """Object with canvas-surface and screen-surface."""
 
     pygame.display.set_caption(screen.__class__.__name__)
 
@@ -62,7 +64,7 @@ def main():
                 if event.key == pygame.K_8:
                     screen = pgs.ScreenScaleDown(window_size, modern)
                 if event.key == pygame.K_q:
-                    # Create a ScreemFixed with random scale and position.
+                    # Create a ScreenFixed with random scale and position.
                     screen = pgs.ScreenFixed(window_size)
 
                     # Set new random scale.
@@ -74,7 +76,7 @@ def main():
                     y = randrange(window_size[1])
                     screen.geometry.position = (x, y)
                 if event.key == pygame.K_w:
-                    # Create a ScreemFixedCenter with random scale.
+                    # Create a ScreenFixedCenter with random scale.
                     screen = pgs.ScreenCenterFixedSize(window_size)
 
                     # Set new random scale.
@@ -92,10 +94,10 @@ def main():
         screen.clear()
 
         # Render a circle to help demonstrate the scaling.
-        pygame.draw.circle(screen.canvas, (255, 255, 255), (160, 120), 32)
+        pygame.draw.circle(screen.foreground, (255, 255, 255), (160, 120), 32)
 
         # Blit canvas-surface to screen-surface.
-        screen.blit_canvas_to_screen()
+        screen.blit_foreground_to_background()
 
         pygame.display.flip()
 

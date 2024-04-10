@@ -1,5 +1,5 @@
 """
-Pygame-screen is a module to extend pygame with a combined canvas-surface and screen-surface.
+Pygame-screen is a module to extend pygame with a combined foreground-surface and screen-surface.
 It is written to be used with the excellent pygame.
 """
 

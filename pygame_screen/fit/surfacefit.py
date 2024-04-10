@@ -13,7 +13,7 @@ def surface_resize_to(
     size: tuple[float, float],
     use_smooth_scaling: bool = False,
 ) -> pygame.surface:
-    """Docstring."""
+    """Please edit this docstring."""
     if use_smooth_scaling:
         return pygame.transform.smoothscale(surface, size)
 
@@ -25,14 +25,16 @@ def surface_scale_by(
     factor: tuple[float, float],
     use_smooth_scaling: bool = False,
 ) -> pygame.surface:
-    """Docstring."""
+    """Please edit this docstring."""
     if use_smooth_scaling:
         return pygame.transform.smoothscale_by(surface, factor)
 
     return pygame.transform.scale_by(surface, factor)
 
 
-def surface_sizes(surface_a, surface_b) -> tuple[tuple[int, int], tuple[int, int]]:
+def surface_sizes(
+    surface_a, surface_b
+) -> tuple[tuple[float, float], tuple[float, float]]:
     """Get tuple's with sizes from surfaces."""
     size_a = ...
     size_b = ...
@@ -57,7 +59,7 @@ def surface_contain(
     use_smooth_scaling: bool = False,
     clamp: bool = False,
 ) -> pygame.surface:
-    """Docstring."""
+    """Please edit this docstring."""
     size_a, size_b = surface_sizes(surface_a, surface_b)
     scale = objectfit.resize_contain(size_a, size_b, use_integer_scaling, clamp)
     return surface_scale_by(surface_a, scale, use_smooth_scaling)
@@ -70,7 +72,7 @@ def surface_cover(
     use_smooth_scaling: bool = False,
     clamp: bool = False,
 ) -> pygame.surface:
-    """Docstring."""
+    """Please edit this docstring."""
     size_a, size_b = surface_sizes(surface_a, surface_b)
     scale = objectfit.resize_cover(size_a, size_b, use_integer_scaling, clamp)
     return surface_scale_by(surface_a, scale, use_smooth_scaling)
@@ -83,7 +85,7 @@ def surface_fill(
     use_smooth_scaling: bool = False,
     clamp: bool = False,
 ) -> pygame.surface:
-    """Docstring."""
+    """Please edit this docstring."""
     size_a, size_b = surface_sizes(surface_a, surface_b)
     scale = objectfit.resize_fill(size_a, size_b, use_integer_scaling, clamp)
     return surface_scale_by(surface_a, scale, use_smooth_scaling)
@@ -96,7 +98,7 @@ def surface_scale_down(
     use_smooth_scaling: bool = False,
     clamp: bool = False,
 ) -> pygame.surface:
-    """Docstring."""
+    """Please edit this docstring."""
     size_a, size_b = surface_sizes(surface_a, surface_b)
     scale = objectfit.resize_scale_down(size_a, size_b, use_integer_scaling, clamp)
     return surface_scale_by(surface_a, scale, use_smooth_scaling)
@@ -109,7 +111,7 @@ def surface_match(
     use_smooth_scaling: bool = False,
     clamp: bool = False,
 ) -> pygame.surface:
-    """Docstring."""
+    """Please edit this docstring."""
     _, size_b = surface_sizes(surface_a, surface_b)
 
     new_size = objectfit.resize_match(size_b, use_integer_scaling, clamp)
