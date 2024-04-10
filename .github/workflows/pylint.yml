@@ -19,9 +19,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install pylint
         pip install pygame-ce
-    - name: Analysing the code with pylint
+    - name: Analysing the code in ./pygame_screen/ with pylint
       run: |
         echo $(git ls-files './pygame_screen/*.py')
+        pylint $(git ls-files './pygame_screen/*.py')     
+    - name: Analysing the code in ./example*.py with pylint
+      run: |
         echo $(git ls-files 'example*.py')
-        pylint $(git ls-files './pygame_screen/*.py')        
+        pylint $(git ls-files 'example*.py')        
         
