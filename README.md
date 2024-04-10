@@ -11,6 +11,8 @@ Different ways the foreground-surface can be placed on the background-surface.
 * Fixed (position and size)
 * Match (canvas-surface match screen-surface resolution)
 * Scale-down
+  
+Read more about it here: https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit
 ## Quick tutorial
 ### Install with pip (not ready)
 pip install pygame-screen
@@ -74,4 +76,4 @@ if __name__ == "__main__":
 * GitHub https://github.com/
 * pylint https://github.com/pylint-dev/pylint
 * The Python Package Index https://pypi.org/
-* ...and everyone else.
+* ... and everyone else.
