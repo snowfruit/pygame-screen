@@ -2,10 +2,10 @@
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/snowfruit/pygame-screen/.github%2Fworkflows%2Fpylint.yml)
 
 # pygame-screen
-Add a responsive canvas-surface to your screen-surface.
+Add a responsive foreground-surface over an adaptive background-surface.
 
 ## Fit the canvas on screen
-Different ways the canvas-surface can be placed on the screen-surface.
+Different ways the foreground-surface can be placed on the background-surface.
 * Center, fixed size
 * Contain
 * Cover
