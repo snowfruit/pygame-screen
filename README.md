@@ -15,7 +15,7 @@ Different ways the foreground-surface can be placed on the background-surface.
 * Scale-down
 
 ## Quick tutorial
-### Install
+### Install (not ready)
 pip install pygame-screen
 ### Example
 
