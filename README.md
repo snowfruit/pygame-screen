@@ -1,6 +1,10 @@
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/snowfruit/pygame-screen/.github%2Fworkflows%2Fpylint.yml)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat&labelColor=ef8336)](https://pycqa.github.io/isort/)
+
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/snowfruit/pygame-screen/.github%2Fworkflows%2Fpylint.yml)
+<!--![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/snowfruit/pygame-screen/.github%2Fworkflows%2Fpython-isort.yml)-->
+<!--![Read the Docs](https://img.shields.io/readthedocs/pygame-screen)-->
 # pygame-screen
 Add a responsive foreground-surface over an adaptive background-surface.
 ## Fit the canvas on screen
