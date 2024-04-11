@@ -9,7 +9,7 @@
 
     isortVersion: # optional, default is latest
     # files or directories to sort
-    sort-paths: # optional
+    sort-paths: ./pygame_screen
     # files or directories to sort (DEPRECATED: use sort-paths instead)
 
     sortPaths: # optional, default is .
@@ -20,5 +20,4 @@
     requirements-files: # optional
     # path(s) to requirements files that should be installed to properly configure third-party imports (DEPRECATED: use requirement-files instead)
 
-    requirementsFiles: # optional, default is 
-          
+    requirementsFiles: # optional, default is
